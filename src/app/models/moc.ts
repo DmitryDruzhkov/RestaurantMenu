@@ -25,7 +25,7 @@ export const Sections: Section[] = [
         ],
         name: 'Капучино',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Black,
       },
       {
         id: 'f4c6d32f',
@@ -45,7 +45,7 @@ export const Sections: Section[] = [
         ],
         name: 'Латте',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Blue,
       },
       {
         id: 'f2a855fe',
@@ -65,7 +65,7 @@ export const Sections: Section[] = [
         ],
         name: 'Раф',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Chocolate,
       },
       {
         id: 'f1515290',
@@ -81,7 +81,7 @@ export const Sections: Section[] = [
         ],
         name: 'Флэт Уайт',
         sections: [],
-        color: Colors.Red,
+        color: Colors.DarkBlue,
       },
       {
         id: 'f5e6f78c',
@@ -93,7 +93,7 @@ export const Sections: Section[] = [
         ],
         name: 'Мокко',
         sections: [],
-        color: Colors.Red,
+        color: Colors.DarkCyan,
       }
     ]
   },
@@ -101,7 +101,7 @@ export const Sections: Section[] = [
     id: 'fa6536a',
     items: [],
     name: 'Черный Кофе',
-    color: Colors.Red,
+    color: Colors.DarkGreen,
     sections: [
       {
         id: 'f4418fcf',
@@ -121,7 +121,7 @@ export const Sections: Section[] = [
         ],
         name: 'Американо',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Gray,
       },
       {
         id: 'f5da8b2a',
@@ -133,7 +133,7 @@ export const Sections: Section[] = [
         ],
         name: 'Эспрессо',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Indigo,
       }
     ]
   },
@@ -156,7 +156,7 @@ export const Sections: Section[] = [
         ],
         name: 'Какао',
         sections: [],
-        color: Colors.Red,
+        color: Colors.LightCoral,
       },
       {
         id: 'f45edb8e',
@@ -172,10 +172,10 @@ export const Sections: Section[] = [
         ],
         name: 'Чай Облепиховый',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Lime,
       }
     ],
-    color: Colors.Red,
+    color: Colors.Maroon,
   },
   {
     id: 'f1c40281',
@@ -191,7 +191,7 @@ export const Sections: Section[] = [
     ],
     name: 'Сезонные Напитки',
     sections: [],
-    color: Colors.Red,
+    color: Colors.MediumSpringGreen,
   },
   {
     id: 'f1599c1b',
@@ -208,7 +208,7 @@ export const Sections: Section[] = [
         ],
         name: 'Сиропы',
         sections: [],
-        color: Colors.Red,
+        color: Colors.Olive,
       },
       {
         id: 'f35d807a',
@@ -220,7 +220,7 @@ export const Sections: Section[] = [
         ],
         name: 'Халва',
         sections: [],
-        color: Colors.Red,
+        color: Colors.OrangeRed,
       },
       {
         id: 'f2a54f70',
@@ -264,9 +264,9 @@ export const Sections: Section[] = [
         ],
         name: 'Молоко',
         sections: [],
-        color: Colors.Red,
+        color: Colors.PaleGreen,
       }
     ],
-    color: Colors.Red,
+    color: Colors.Pink,
   }
 ];
