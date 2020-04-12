@@ -1,0 +1,24 @@
+<mat-divider></mat-divider>
+<div class="navigation">
+  <button (click)='addSection()' class="btn mat-stroked-button pull-right">
+    <mat-icon>add_circle_outline</mat-icon>Раздел
+  </button>
+  <button (click)='addPosition()' [disabled]='!(activeSection | async)' class="btn mat-stroked-button pull-right">
+    <mat-icon>add_circle_outline</mat-icon>Позиция
+  </button>
+</div>
+<ng-content *ngTemplateOutlet='(sections | async).length > 0 ? sectionView : stubView'></ng-content>
+
+
+<ng-template #sectionView>
+  <app-section  [section]='section' 
+    (delete)='deleteSection(i)'
+    *ngFor="let section of sections | async; let i = index">
+  </app-section>
+</ng-template>
+
+<ng-template #stubView>
+  <div class="stub">
+    Добавьте в новое меню разделы и позиции
+  </div>
+</ng-template>

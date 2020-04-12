@@ -1,0 +1,7 @@
+<mat-card>
+  <app-context-menu [actions]='positionActions' (action)='handleAction($event)'></app-context-menu>
+  <div class="info">
+    <span>{{position.name}}</span>
+    <span>{{position.sale}}</span>
+  </div>
+</mat-card>

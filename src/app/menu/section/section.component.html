@@ -1,0 +1,23 @@
+<mat-accordion>
+  <mat-expansion-panel >
+    <mat-expansion-panel-header [ngStyle]="{'border-color': getBorderColor()}" 
+                                [collapsedHeight]="'48px'" 
+                                [expandedHeight]="'48px'"
+                                [ngClass]="{'section-active': (activeSection| async)?.id === section.id}">
+      <mat-panel-title (click)="titleClick($event)">
+        <app-context-menu [actions]='sectionActions' (action)='handleAction($event)'></app-context-menu>
+        <div (click)='selectSection()' class="sectionName">
+          {{section.name}}
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-section  [section]='section' 
+                  (delete)='deleteSection(i)'
+                  *ngFor="let section of section.sections; let i = index">
+    </app-section>
+    <app-position [position]='item' 
+                  (action)='handleActionPosition($event, i)'
+                  *ngFor="let item of section.items; let i = index">
+    </app-position>
+  </mat-expansion-panel>
+</mat-accordion>

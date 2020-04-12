@@ -1,0 +1,46 @@
+<div class="title">
+  <div class="title-text">{{title}}</div>
+  <a routerLink="/"><button mat-button>Отмена</button></a>
+</div>
+<form [formGroup]="sectionForm" (ngSubmit)="onSubmit()">
+  <div>
+    <div class="subTitle">Название</div>
+    <mat-form-field appearance="outline">
+      <input  type="text"
+              matInput  
+              placeholder="Введите название категории" 
+              formControlName="name">
+    </mat-form-field>
+    <div class="subTitle">Раздел</div>
+    <mat-form-field appearance="outline">
+      <input type="text"
+             placeholder="Название родитеского раздела"
+             aria-label="Number"
+             matInput
+             formControlName="sectionControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let section of filteredSections | async" [value]="section">
+          {{section.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <div class="subTitle">Цвет раздела</div>
+    <div class="colors">
+      <div class="color" *ngFor='let color of getColors()' [ngClass]="{'color-selected': sectionForm.get('color').value === color}">
+        <button mat-mini-fab 
+                type='button'
+                (click)='selectColor(color)' 
+                [style.background-color]='getColor(color)'>
+        </button>
+      </div>  
+    </div>
+  </div>
+  <button class="submitBtn"
+          type="submit" 
+          mat-flat-button 
+          [disabled]="!sectionForm.valid">
+          Сохранить
+  </button>
+</form>
+

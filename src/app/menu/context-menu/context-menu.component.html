@@ -1,0 +1,9 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" (click)="onClick($event)" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button (click)='onAction(action)' mat-menu-item *ngFor='let action of actions' [disabled]='action.disabled'>
+    <mat-icon>{{action.icon}}</mat-icon>
+    <span>{{action.title}}</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,17 @@
+:host {
+  background-color: #ECF1F9;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}

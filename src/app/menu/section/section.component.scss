@@ -1,0 +1,52 @@
+::ng-deep {
+  .mat-expansion-panel-body {
+    padding: 0 0 16px 24px !important;
+  }
+
+  .section-active {
+    background-color: #409BEF !important;
+  
+    .mat-expansion-indicator::after,
+    .mat-icon {
+      color: white;
+    }
+  }
+}
+
+.mat-expansion-panel-header {
+  flex-direction: row-reverse;
+  background-color: #ffffff !important;
+  margin-bottom: 8px;
+  height: 48px;
+  border-left: 4px solid;
+
+  .mat-content {
+    padding-left: 12px;
+  }
+}
+
+.mat-expansion-panel-header-title {
+  margin: 0 0 0 16px;
+  align-items: center;
+}
+
+app-context-menu {
+  margin-right: 12px;
+}
+
+mat-expansion-panel {
+  background-color: #ECF1F9;
+  box-shadow: none !important;
+}
+
+.sectionName {
+  width: 100%;
+}
+
+.section-active {
+  background-color: #409BEF !important;
+
+  .sectionName {
+    color: white;
+  }
+}

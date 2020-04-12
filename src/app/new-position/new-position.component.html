@@ -1,0 +1,28 @@
+<div class="title">
+  <div class="title-text">{{title}}</div>
+  <a routerLink="/"><button mat-button>Отмена</button></a>
+</div>
+<form [formGroup]="positionForm" (ngSubmit)="onSubmit()">
+  <div>
+    <div class="subTitle">Нащвание</div>
+    <mat-form-field appearance="outline">
+      <input  type="text"
+              matInput  
+              placeholder="Введите название позиции" 
+              formControlName="name">
+    </mat-form-field>
+    <div class="subTitle">Цена</div>
+    <mat-form-field appearance="outline">
+      <input  type="text"
+              matInput  
+              placeholder="0 р" 
+              formControlName="sale">
+    </mat-form-field>
+  </div>
+  <button class="submitBtn"
+          type="submit" 
+          mat-flat-button 
+          [disabled]="!positionForm.valid">
+          Сохранить
+  </button>
+</form>
