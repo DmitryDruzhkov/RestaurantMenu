@@ -15,6 +15,7 @@ import { StateService, State } from 'src/app/services/state.service';
 import { EditPositionService } from 'src/app/services/edit-position.service';
 import { SectionsService } from 'src/app/services/sections.service';
 import { Observable } from 'rxjs';
+import { Position } from 'src/app/models/position';
 
 @Component({
   selector: 'app-section',
@@ -23,7 +24,7 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionComponent {
-  @Input() section: Section;
+  @Input() section!: Section;
   @Output() delete: EventEmitter<null> = new EventEmitter();
 
   activeSection: Observable<Section>;
@@ -98,7 +99,7 @@ export class SectionComponent {
   }
 
   selectSection(): void {
-    let activeSection: Section;
+    let activeSection: Section = {} as Section;
 
     if (this.sectionsService.activeSectionValue()?.id !== this.section.id) {
       activeSection = this.section;
