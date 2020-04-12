@@ -24,7 +24,7 @@ import { Position } from 'src/app/models/position';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionComponent {
-  @Input() section!: Section;
+  @Input() section: Section;
   @Output() delete: EventEmitter<null> = new EventEmitter();
 
   activeSection: Observable<Section>;

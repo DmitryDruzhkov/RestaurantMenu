@@ -15,7 +15,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PositionComponent {
-  @Input() position!: Position;
+  @Input() position: Position;
   @Output() action: EventEmitter<ContextAction> = new EventEmitter();
 
   positionActions: ContextAction[] = [
