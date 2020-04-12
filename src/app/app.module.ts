@@ -22,6 +22,7 @@ import { SectionComponent } from './menu/section/section.component';
 import { PositionComponent } from './menu/position/position.component';
 import { ContextMenuComponent } from './menu/context-menu/context-menu.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { PrisePipe } from './pipes/prise.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MenuComponent,
     SectionComponent,
     PositionComponent,
-    ContextMenuComponent
+    ContextMenuComponent,
+    PrisePipe
   ],
   imports: [
     BrowserModule,

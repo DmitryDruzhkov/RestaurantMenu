@@ -2,6 +2,6 @@
   <app-context-menu [actions]='positionActions' (action)='handleAction($event)'></app-context-menu>
   <div class="info">
     <span>{{position.name}}</span>
-    <span>{{position.sale}}</span>
+    <span>{{position.sale | prise}}</span>
   </div>
 </mat-card>
